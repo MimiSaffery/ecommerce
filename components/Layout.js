@@ -31,7 +31,7 @@ function Layout({ children }) {
                   fill="currentColor"
                 />
               </svg>
-              <span className="mx-1 text-sm">NY</span>
+              <span className="mx-1 text-sm">LDN</span>
             </div>
             <div className="w-full text-gray-700 md:text-center text-2xl font-semibold">
               Jacobs clothes.
