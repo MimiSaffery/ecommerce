@@ -27,7 +27,7 @@ const hiddenDocTypes = (listItem) =>
 
 export default () =>
   S.list()
-    .title("Jacob clothes.")
+    .title("Ecommerce")
     .items([
       S.documentTypeListItem("product").title("Products"),
       S.listItem()
