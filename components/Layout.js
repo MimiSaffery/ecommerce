@@ -9,6 +9,7 @@ function Layout({ children }) {
   const handleOpen = () => setCartOpen(!cartOpen);
   return (
     <div className="bg-white">
+      <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap')</style>
       <header>
         <Nav>
           <NavContainer>
@@ -20,17 +21,17 @@ function Layout({ children }) {
               menuOpen ? "" : "hidden"
             }`}
             >
-              <NavLink href="/">
+              <NavLink href="/" passHref>
                 <a>
                   Home
                 </a>
               </NavLink>
-              <NavLink href="/products">
+              <NavLink href="/products" passHref>
                 <a>
                   Shop
                 </a>
               </NavLink>
-              <NavLink href="/about">
+              <NavLink href="/about" passHref>
                 <a>
                   About
                 </a>
@@ -118,33 +119,45 @@ function Layout({ children }) {
   );
 }
 const Logo = s.div`
-
+font-family: 'Quicksand', sans-serif;
+text-transform: uppercase;
+cursor:  pointer;
 `;
 
 const NavContainer  = s.div`
-margin: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  align-items: center;
-  flex-direction: column;
-  @media (min-width: 798px){
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  
+display: flex;
+justify-content: space-around;
+padding: 20px;
+font-family: 'Quicksand', sans-serif;
+background-color: #303030;
+color: white;
 `;
-
+// margin: 20px;
+  //width: 100%;
+ // display: flex;
+ // justify-content: center;
+ // height: 60px;
+ // align-items: center;
+ // flex-direction: column;
+ // @media (min-width: 798px){
+//   justify-content: space-between;
+//   flex-direction: row;
+ // }
 const NavLink = s(Link)`
-  
 `;
 const Nav = s.div`
 
 `;
-const NavLinks = s.div`
+const NavLinks = s.ul`
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  align-items: center;
+a{
+  transition: all 0.3s ease 0s;
+  padding: 0px 20px;
+}
+a:hover {
+  color: pink;
+}
 `;
 export default Layout;
